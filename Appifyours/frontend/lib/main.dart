@@ -424,7 +424,7 @@ class MyApp extends StatelessWidget {
 // API Configuration - Auto-updated with your server details
 class ApiConfig {
   static String get baseUrl => dotenv.env['API_BASE'] ?? (throw Exception('API_BASE environment variable is not set. Please configure it in your .env file.'));
-  static const String adminObjectId = 'ADMIN_OBJECT_ID_HERE'; // Will be replaced during publish
+  static const String adminObjectId = '6a7078749971af79ed7b885a'; // Will be replaced during publish
   static const String appId = 'APP_ID_HERE'; // Will be replaced during publish
 }
 class SessionManager {
@@ -491,7 +491,7 @@ class AdminManager {
   static Future<String?> _autoDetectAdminId() async {
     try {
       final response = await http.get(
-        Uri.parse('http://192.168.0.5:5000/api/admin/app-info'),
+        Uri.parse('https://appifyours.com/api/admin/app-info'),
         headers: {'Content-Type': 'application/json'},
       );
       if (response.statusCode == 200) {
@@ -657,7 +657,7 @@ class _SignInPageState extends State<SignInPage> {
     try {
       final adminId = await AdminManager.getCurrentAdminId();
       final response = await http.post(
-        Uri.parse('http://192.168.0.5:5000/api/login'),
+        Uri.parse('https://appifyours.com/api/login'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'email': _emailController.text.trim(),
