@@ -430,7 +430,7 @@ app.get('/api/app-config', async (req, res) => {
 
     const config = {
 
-      adminId: '6a706b47e81f2c2f51b748cf',
+      adminId: '6a7078749971af79ed7b885a',
 
       shopName: 'Jerry shop',
 
