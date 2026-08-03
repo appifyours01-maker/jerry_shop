@@ -18,7 +18,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'dart:io';
-import 'package:frontend/services/api_service.dart';
+import 'package:appifyours/services/api_service.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 // ================================================================
